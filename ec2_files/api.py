@@ -32,7 +32,13 @@ def dict_factory(cursor,row):
 
 @app.route('/', methods=["GET"])
 def home():
-    return "<h1>Distance Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
+    ret = "Hazim Ab Halim Resume API\n use 'curl curl.hazimabhalim.com/help' command for instructions"
+    return ret
+
+@app.route('/',methods=["GET"])
+def help():
+    ret = "Education: 'curl curl.hazimabhalim.com/education'\n Skills: 'curl curl.hazimabhalim.com/skills'\n  "
+
 
 @app.route('/api/v1/resources/books/all', methods= ['GET'])
 def api_all():
